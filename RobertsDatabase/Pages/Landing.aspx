@@ -37,12 +37,12 @@
             <div class="row">
                 <div class="col-sm-12">
 
-                    <asp:TextBox ID="txtSearch" placeholder="Search" runat="server" Width="1402px"></asp:TextBox>
+                    <asp:TextBox ID="txtSearch" placeholder="Search" runat="server" Width="100%"></asp:TextBox>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" Width="1411px" />
+                    <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" Width="100%" />
                 </div>
             </div>
             <div class="table-responsive">
@@ -50,7 +50,7 @@
                       <tbody>
                     <tr>
                         <td>
-                            <asp:GridView ID="gvList" AutoGenerateColumns="false" runat="server" OnSelectedIndexChanged="gvList_SelectedIndexChanged" owStyle-Wrap="false" Width="1414px">
+                            <asp:GridView ID="gvList" AutoGenerateColumns="false" runat="server" OnSelectedIndexChanged="gvList_SelectedIndexChanged" owStyle-Wrap="false" Width="100%">
                             <Columns>
                                 <asp:CommandField ShowSelectButton="true" />
                                 <asp:BoundField  DataField="Trade" HeaderText="Trade" />

@@ -36,11 +36,11 @@ namespace RobertsDatabase.Model
         }
  
 
-        public static List<DatabaseData> Filter(string name)
+        public static List<DatabaseData> Filter(string Trade)
         {
-           
-            var query = "SELECT * FROM RL WHERE trade LIKE '%' || @auth || '%'";
-            var param = new { auth = name };
+            //WHERE(col1 LIKE '%keyword%' OR col2 LIKE '%keyword%' OR col3 LIKE '%keyword%' OR col4 LIKE '%keyword%')
+            var query = "SELECT * FROM RL WHERE Trade LIKE '%' || @auth || '%' OR Class LIKE '%' || @auth || '%' OR Description LIKE '%' || @auth || '%' OR Project LIKE '%' || @auth || '%' OR Ref LIKE '%' || @auth || '%' OR Rate LIKE '%' || @auth || '%' OR UoM LIKE '%' || @auth || '%'";
+            var param = new { auth = Trade };
             return Select(query, param);
         }
 
